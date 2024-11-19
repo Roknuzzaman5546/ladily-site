@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import logo from '../../assets/logo.png'
-import SearchIcon from "../SearchIcon/SearchIcon";
+import SearchIcon from "../Icon/SearchIcon";
+import UserIcon from "../Icon/UserIcon";
+import LoveIcon from "../Icon/LoveIcon";
+import CartIcon from "../Icon/CartIcon";
 
 const Navbar = () => {
     const [isNavbarJumping, setIsNavbarJumping] = useState(false);
@@ -18,21 +21,39 @@ const Navbar = () => {
 
 
     return (
-        <div className={`w-full sticky top-0 left-0 right-0 bg-white mx-auto transition-all duration-500 ease-in-out z-[310] ${isNavbarJumping ? "shadow-md" : "transition-all duration-300 ease-in-out"}`}>
+        <div>
             {/* for desktop & tab device */}
             <div className={`md:block hidden relative`}>
                 {/* Upper menu */}
                 <div>
-                    <div className={`flex py-[16px] sm:w-[540px] md:w-[720px] lg:w-[966px] xl:w-[1140px] 2xl:w-[1360px] mx-auto`}>
-                        <div className='flex items-center '>
+                    <div className={`flex justify-between items-center py-[16px] sm:w-[540px] md:w-[720px] lg:w-[966px] xl:w-[1140px] 2xl:w-[1360px] mx-auto`}>
+                        <div className='flex items-center'>
                             <img className='' src={logo} height={90} width={90} alt="" />
                         </div>
-
-                        <div
-                            className='flex justify-center items-center border-b-[1.5px] border-black'>
-                            <input type="text" placeholder='Search in ladily' className=' border-none outline-0 ring-0' />
+                        <div className=" flex items-stretch gap-4 w-1/2">
+                            <div className=" w-full">
+                                <div
+                                    className='flex justify-center items-center border-b-[1.5px] border-black'>
+                                    <input type="text" placeholder='Search in Ladily' className=' placeholder:font-cormorant placeholder:text-black placeholder:font-semibold border-none outline-0 ring-0 w-full' />
+                                    <button>
+                                        <SearchIcon></SearchIcon>
+                                    </button>
+                                </div>
+                            </div>
                             <button>
-                                <SearchIcon></SearchIcon>
+                                <UserIcon></UserIcon>
+                            </button>
+                            <button className=" flex">
+                                <LoveIcon></LoveIcon>
+                                <div className="w-[16px] h-[16px] text-[10px] text-white bg-[#543310] flex justify-center items-center -mt-1 -ml-2 rounded-full">
+                                    <p>0</p>
+                                </div>
+                            </button>
+                            <button className=" flex">
+                                <CartIcon></CartIcon>
+                                <div className="w-[16px] h-[16px] text-[10px] text-white bg-[#543310] flex justify-center items-center -mt-1 -ml-2 rounded-full">
+                                    <p>0</p>
+                                </div>
                             </button>
                         </div>
                     </div>
@@ -40,21 +61,6 @@ const Navbar = () => {
                 </div>
                 {/* down menu */}
                 <div className="w-full bg-white">
-                    <div className={`max-w-[1280px] mx-auto custom-range:px-12 px-5 pt-[12px] ${isNavbarJumping ? "h-0 opacity-0 hidden transition-all duration-300 ease-in-out" : "h-auto opacity-100"}`}>
-                        <div className={`border-[#f5f5f5] lg:flex md:hidden hidden justify-between items-center pb-[10px]`}>
-                            <div className="flex items-center">
-                                <a className="navAfter relative font-semibold mr-6 text-[#323232] text-[13px] font-sans cursor-pointer">fotoservice</a>
-                                <a className="navAfter relative font-semibold mr-6 text-[#323232] text-[13px] font-sans cursor-pointer">tickets & deals</a>
-                                <a className="navAfter relative font-semibold mr-6 text-[#323232] text-[13px] font-sans cursor-pointer">verzekeringen</a>
-                                <a className="navAfter relative font-semibold text-[#323232] text-[13px] font-sans cursor-pointer">inspiratie</a>
-                            </div>
-                            <div className="flex items-center">
-                                <a className="navAfter relative mr-6 font-semibold text-[#323232] text-[13px] font-sans cursor-pointer">winkels</a>
-                                <a className="navAfter relative mr-6 font-semibold text-[#323232] text-[13px] font-sans  cursor-pointer">oklantenpas</a>
-                                <a className="navAfter relative font-semibold text-[#323232] text-[13px] font-sans cursor-pointer">klantenservice</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
