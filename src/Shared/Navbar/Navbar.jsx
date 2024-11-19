@@ -25,31 +25,34 @@ const Navbar = () => {
             {/* for desktop & tab device */}
             <div className={`md:block hidden relative`}>
                 {/* Upper menu */}
-                <div>
-                    <div className={`flex justify-between items-center py-[16px] sm:w-[540px] md:w-[720px] lg:w-[966px] xl:w-[1140px] 2xl:w-[1360px] mx-auto`}>
+                <div className="border-b-[1.5px] border-[#d4d4d4]">
+                    <div className={`flex justify-between items-start pt-[16px] pb-[15.5px] sm:w-[540px] md:w-[720px] lg:w-[966px] xl:w-[1140px] 2xl:w-[1360px] mx-auto pr-[6px]`}>
                         <div className='flex items-center'>
-                            <img className='' src={logo} height={90} width={90} alt="" />
+                            <img className='' src={logo} height={20} width={89.9} alt="" />
                         </div>
-                        <div className=" flex items-stretch gap-4 w-1/2">
-                            <div className=" w-full">
-                                <div
-                                    className='flex justify-center items-center border-b-[1.5px] border-black'>
-                                    <input type="text" placeholder='Search in Ladily' className=' placeholder:font-cormorant placeholder:text-black placeholder:font-semibold border-none outline-0 ring-0 w-full' />
+                        <div className="flex items-end w-[43.3%] -mt-[2px]">
+                            <div className="w-full">
+                                <div className="flex justify-center items-end border-b-[1.5px] border-black pb-[4px]">
+                                    <input
+                                        type="text"
+                                        placeholder="Search in Ladily"
+                                        className="placeholder:font-cormorant placeholder:text-black placeholder:font-semibold border-none outline-0 ring-0 w-full"
+                                    />
                                     <button>
-                                        <SearchIcon></SearchIcon>
+                                        <SearchIcon className="mt-[5px]" />
                                     </button>
                                 </div>
                             </div>
-                            <button>
-                                <UserIcon></UserIcon>
+                            <button className="pl-4">
+                                <UserIcon />
                             </button>
-                            <button className=" flex">
+                            <button className=" flex !pl-4">
                                 <LoveIcon></LoveIcon>
                                 <div className="w-[16px] h-[16px] text-[10px] text-white bg-[#543310] flex justify-center items-center -mt-1 -ml-2 rounded-full">
                                     <p>0</p>
                                 </div>
                             </button>
-                            <button className=" flex">
+                            <button className=" flex !pl-4">
                                 <CartIcon></CartIcon>
                                 <div className="w-[16px] h-[16px] text-[10px] text-white bg-[#543310] flex justify-center items-center -mt-1 -ml-2 rounded-full">
                                     <p>0</p>
