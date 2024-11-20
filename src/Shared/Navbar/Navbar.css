@@ -1,0 +1,8 @@
+.dropdown-info {
+  display: none;
+  margin-bottom: -30px;
+}
+
+.dropdown-parent:hover>.dropdown-info {
+  display: block;
+}
