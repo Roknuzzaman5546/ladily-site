@@ -25,7 +25,7 @@ const Navbar = () => {
     return (
         <div>
             {/* for desktop & tab device */}
-            <div className={`md:block hidden relative`}>
+            <div className={`md:block hidden relative shadow-md`}>
                 {/* Upper menu */}
                 <div className="border-b-[1.5px] border-[#d4d4d4]">
                     <div className={`flex justify-between items-center h-[63px] sm:w-[540px] md:w-[720px] lg:w-[966px] xl:w-[1140px] 2xl:w-[1360px] mx-auto pr-0 md:pr-[6px] lg:pr-[6px] xl:pr-0`}>
@@ -73,13 +73,30 @@ const Navbar = () => {
                             </button>
                         </div>
                     </div>
-
                 </div>
                 {/* down menu */}
-                <div className="w-full bg-white">
+                <div className="w-full bg-white flex justify-center items-center h-[55px]">
                     <div>
                         <nav className=" flex justify-center items-center gap-2">
-                            <li className=" font-cormorant text-2xl list-none">Face</li>
+                            <li className=" font-cormorant text-xl font-semibold list-none">Face</li>
+                            <p><ChevronDownIcon /></p>
+                        </nav>
+                    </div>
+                    <div>
+                        <nav className=" flex justify-center items-center gap-2">
+                            <li className=" font-cormorant text-xl font-semibold list-none">Eyes</li>
+                            <p><ChevronDownIcon /></p>
+                        </nav>
+                    </div>
+                    <div>
+                        <nav className=" flex justify-center items-center gap-2">
+                            <li className=" font-cormorant text-xl font-semibold list-none">Hair</li>
+                            <p><ChevronDownIcon /></p>
+                        </nav>
+                    </div>
+                    <div>
+                        <nav className=" flex justify-center items-center gap-2">
+                            <li className=" font-cormorant text-xl font-semibold list-none">Body care</li>
                             <p><ChevronDownIcon /></p>
                         </nav>
                     </div>
