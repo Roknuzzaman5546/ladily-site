@@ -26,20 +26,22 @@ const Navbar = () => {
             <div className={`md:block hidden relative`}>
                 {/* Upper menu */}
                 <div className="border-b-[1.5px] border-[#d4d4d4]">
-                    <div className={`flex justify-between items-start pt-[16px] pb-[15.5px] sm:w-[540px] md:w-[720px] lg:w-[966px] xl:w-[1140px] 2xl:w-[1360px] mx-auto pr-[6px]`}>
+                    <div className={`flex justify-between items-center h-[63px] sm:w-[540px] md:w-[720px] lg:w-[966px] xl:w-[1140px] 2xl:w-[1360px] mx-auto pr-0 md:pr-[6px] lg:pr-[6px] xl:pr-0`}>
                         <div className='flex items-center'>
-                            <img className='' src={logo} height={20} width={89.9} alt="" />
+                            <a href="">
+                                <img className=' w-[100px]' src={logo} alt="" />
+                            </a>
                         </div>
-                        <div className="flex items-end w-[43.3%] -mt-[2px]">
-                            <div className="w-full">
-                                <div className="flex justify-center items-end border-b-[1.5px] border-black pb-[4px]">
+                        <div className="flex items-end -mt-[2px]">
+                            <div className="w-full md:w-[297px]">
+                                <div className="flex justify-center items-center border-b-[1.5px] border-black">
                                     <input
                                         type="text"
                                         placeholder="Search in Ladily"
-                                        className="placeholder:font-cormorant placeholder:text-black placeholder:font-semibold border-none outline-0 ring-0 w-full"
+                                        className="placeholder:font-cormorant placeholder:text-[#0000] placeholder:font-semibold border-none outline-0 ring-0 w-full pb-[1px]"
                                     />
                                     <button>
-                                        <SearchIcon className="mt-[5px]" />
+                                        <SearchIcon />
                                     </button>
                                 </div>
                             </div>
