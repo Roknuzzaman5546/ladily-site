@@ -1,64 +1,71 @@
-import { useState, useEffect } from "react";
-import "./Slider.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import './Slider.css';
+import { Pagination } from 'swiper/modules';
+
+
 
 const Banner = () => {
-  const slides = [
-    "number-slide1",
-    "number-slide2",
-    "number-slide3",
-    "number-slide4",
-    "number-slide5",
-    "number-slide6",
-  ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+    const slidesData = [
+        {
+          id: 1,
+          title: "Slide One",
+          subtitle: "This is the first slide.",
+          img: "https://via.placeholder.com/800x300?text=Slide+1"
+        },
+        {
+          id: 2,
+          title: "Slide Two",
+          subtitle: "This is the second slide.",
+          img: "https://via.placeholder.com/800x300?text=Slide+2"
+        },
+        {
+          id: 3,
+          title: "Slide Three",
+          subtitle: "This is the third slide.",
+          img: "https://via.placeholder.com/800x300?text=Slide+3"
+        },
+        {
+          id: 4,
+          title: "Slide Four",
+          subtitle: "This is the fourth slide.",
+          img: "https://via.placeholder.com/800x300?text=Slide+4"
+        },
+        {
+          id: 5,
+          title: "Slide Five",
+          subtitle: "This is the fifth slide.",
+          img: "https://via.placeholder.com/800x300?text=Slide+5"
+        }
+      ];
+      
 
-  // Auto-slide every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-    return () => clearInterval(interval); // Clear interval on component unmount
-  }, [currentIndex]);
-
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
-  };
-
-  return (
-    <div className="navigation-wrapper">
-      <div className="slider" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-        {slides.map((slide, index) => (
-          <div key={index} className={`number-slide ${slide}`}>
-            {index + 1}
-          </div>
-        ))}
-      </div>
-
-      {/* Arrows */}
-      <button className="arrow arrow--left" onClick={prevSlide}>&#8592;</button>
-      <button className="arrow arrow--right" onClick={nextSlide}>&#8594;</button>
-
-      {/* Dots */}
-      <div className="dots">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={`dot ${currentIndex === index ? "active" : ""}`}
-            onClick={() => goToSlide(index)}
-          ></button>
-        ))}
-      </div>
-    </div>
-  );
+    return (
+        <>
+            <div className=' mt-40'>
+                <Swiper
+                    spaceBetween={30}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Pagination]}
+                    className="mySwiper"
+                >
+                    <SwiperSlide>Slide 1</SwiperSlide>
+                    <SwiperSlide>Slide 2</SwiperSlide>
+                    <SwiperSlide>Slide 3</SwiperSlide>
+                    <SwiperSlide>Slide 4</SwiperSlide>
+                    <SwiperSlide>Slide 5</SwiperSlide>
+                    <SwiperSlide>Slide 6</SwiperSlide>
+                    <SwiperSlide>Slide 7</SwiperSlide>
+                    <SwiperSlide>Slide 8</SwiperSlide>
+                    <SwiperSlide>Slide 9</SwiperSlide>
+                </Swiper>
+            </div>
+        </>
+    );
 };
 
 export default Banner;

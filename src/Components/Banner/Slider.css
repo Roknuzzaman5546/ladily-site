@@ -1,18 +1,21 @@
-.slider {
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
   }
   
-  .navigation-wrapper {
-    position: relative;
+  .swiper-slide img {
+    display: block;
     width: 100%;
-    max-width: 100vw;
-    overflow: hidden;
-  }
-  
-  .number-slide {
-    flex: 0 0 100%;
+    height: 100%;
+    object-fit: cover;
   }
   
