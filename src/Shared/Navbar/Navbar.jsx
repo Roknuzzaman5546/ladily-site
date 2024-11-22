@@ -89,23 +89,41 @@ const Navbar = () => {
                             <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold ">Sunscreen</h2>
                         </div>
                     </div>
-                    <div>
+                    <div className="dropdown-parent relative h-full mt-[33px] cursor-pointer">
                         <nav className=" flex justify-center items-center gap-2">
                             <li className=" font-cormorant text-xl font-semibold list-none">Eyes</li>
                             <p><ChevronDownIcon /></p>
                         </nav>
+                        <div className="dropdown-info w-[272px] bg-white absolute top-[45.5px] left-0 shadow-md">
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Eye Serum</h2>
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold">Eye Cream</h2>
+                        </div>
                     </div>
-                    <div>
+                    <div className="dropdown-parent relative h-full mt-[33px] cursor-pointer">
                         <nav className=" flex justify-center items-center gap-2">
                             <li className=" font-cormorant text-xl font-semibold list-none">Hair</li>
                             <p><ChevronDownIcon /></p>
                         </nav>
+                        <div className="dropdown-info w-[272px] bg-white absolute top-[45.5px] left-0 shadow-md">
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Cleanser</h2>
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Toner</h2>
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Serum</h2>
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Moisturizer</h2>
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold ">Sunscreen</h2>
+                        </div>
                     </div>
-                    <div>
+                    <div className="dropdown-parent relative h-full mt-[33px] cursor-pointer">
                         <nav className=" flex justify-center items-center gap-2">
                             <li className=" font-cormorant text-xl font-semibold list-none">Body care</li>
                             <p><ChevronDownIcon /></p>
                         </nav>
+                        <div className="dropdown-info w-[272px] bg-white absolute top-[45.5px] left-0 shadow-md">
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Cleanser</h2>
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Toner</h2>
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Serum</h2>
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Moisturizer</h2>
+                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold ">Sunscreen</h2>
+                        </div>
                     </div>
                 </div>
             </div>
