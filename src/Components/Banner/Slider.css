@@ -1,21 +1,33 @@
-
-  .swiper {
+.swiper {
     width: 100%;
     height: 100%;
-  }
-  
-  .swiper-slide {
+}
+
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .swiper-slide img {
+    position: unset !important;
+}
+
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.swiper-wrapper {
+    position: unset !important;
+}
+
+.mySwiper .swiper-wrapper {
+    position: static !important; /* Or use none/unset */
+  }
+  
+  .mySwiper .swiper-slide {
+    position: static !important;
   }
   

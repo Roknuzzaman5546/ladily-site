@@ -4,8 +4,6 @@ import 'swiper/css/pagination';
 import './Slider.css';
 import { Pagination } from 'swiper/modules';
 
-
-
 const Banner = () => {
 
     const slidesData = [
@@ -44,7 +42,7 @@ const Banner = () => {
 
     return (
         <>
-            <div className=' mt-40'>
+            <div>
                 <Swiper
                     spaceBetween={30}
                     pagination={{
@@ -53,15 +51,21 @@ const Banner = () => {
                     modules={[Pagination]}
                     className="mySwiper"
                 >
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide>
-                    <SwiperSlide>Slide 5</SwiperSlide>
-                    <SwiperSlide>Slide 6</SwiperSlide>
-                    <SwiperSlide>Slide 7</SwiperSlide>
-                    <SwiperSlide>Slide 8</SwiperSlide>
-                    <SwiperSlide>Slide 9</SwiperSlide>
+                  {
+                    slidesData.map((slide, index) => (
+                        <SwiperSlide key={index}>
+                          <div className="h-[300px] w-full">
+                            <img src={slide.img} alt={slide.title} className="object-cover w-full h-full" />
+                          </div>
+                          <div className="absolute bottom-0 w-full h-20 bg-black opacity-50">
+                            <div className="flex justify-center items-center text-white px-6 py-4">
+                              <h2 className="text-lg">{slide.title}</h2>
+                              <p className="text-sm">{slide.subtitle}</p>
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                    ))
+                  }
                 </Swiper>
             </div>
         </>
