@@ -24,18 +24,6 @@ const Banner = () => {
           title: "Slide Three",
           subtitle: "This is the third slide.",
           img: "https://via.placeholder.com/800x300?text=Slide+3"
-        },
-        {
-          id: 4,
-          title: "Slide Four",
-          subtitle: "This is the fourth slide.",
-          img: "https://via.placeholder.com/800x300?text=Slide+4"
-        },
-        {
-          id: 5,
-          title: "Slide Five",
-          subtitle: "This is the fifth slide.",
-          img: "https://via.placeholder.com/800x300?text=Slide+5"
         }
       ];
       

@@ -24,10 +24,10 @@
 }
 
 .mySwiper .swiper-wrapper {
-    position: static !important; /* Or use none/unset */
+    position: unset !important; /* Or use none/unset */
   }
   
   .mySwiper .swiper-slide {
-    position: static !important;
+    position: unset !important;
   }
   
