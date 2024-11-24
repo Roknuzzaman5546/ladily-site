@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
 import SearchIcon from "../Icon/SearchIcon";
 import UserIcon from "../Icon/UserIcon";
 import LoveIcon from "../Icon/LoveIcon";
 import CartIcon from "../Icon/CartIcon";
-import './Navbar.css'
 import ChevronDownIcon from "../Icon/ChevronDownIcon";
+import './Navbar.css';
 
 const Navbar = () => {
     const [isNavbarJumping, setIsNavbarJumping] = useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
@@ -21,10 +22,8 @@ const Navbar = () => {
         };
     }, []);
 
-
     return (
         <div>
-            {/* for desktop & tab device */}
             <div className={`md:block hidden relative shadow-md`}>
                 {/* Upper menu */}
                 <div className="border-b-[1.5px] border-[#d4d4d4]">
@@ -72,59 +71,29 @@ const Navbar = () => {
                                 </div>
                             </button>
                         </div>
-                    </div>
+                    </div>                 
                 </div>
-                {/* down menu */}
-                <div className=" max-w-full bg-white flex justify-center items-center gap-[53px] h-[61px] ml-[48px]">
-                    <div className="dropdown-parent relative h-full mt-[33px] cursor-pointer">
-                        <nav className=" flex justify-center items-center gap-2">
-                            <li className=" font-cormorant text-xl font-semibold list-none">Face</li>
-                            <p><ChevronDownIcon /></p>
-                        </nav>
-                        <div className="dropdown-info w-[272px] bg-white absolute top-[45.5px] left-0 shadow-md">
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Cleanser</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Toner</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Serum</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Moisturizer</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold ">Sunscreen</h2>
+
+                {/* Lower menu */}
+                <div className="flex justify-center items-center gap-[53px] h-[61px] bg-white">
+                    {["Face", "Eyes", "Hair", "Body Care"].map((menu, index) => (
+                        <div key={index} className="dropdown-parent relative h-full mt-[33px] cursor-pointer">
+                            <nav className="flex justify-center items-center gap-2">
+                                <li className="font-cormorant text-xl font-semibold list-none">{menu}</li>
+                                <ChevronDownIcon />
+                            </nav>
+                            <div className="dropdown-info w-[272px] bg-white absolute top-[45px] left-0 shadow-md">
+                                {["Cleanser", "Toner", "Serum", "Moisturizer", "Sunscreen"].map((item, idx) => (
+                                    <h2
+                                        key={idx}
+                                        className="text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]"
+                                    >
+                                        {item}
+                                    </h2>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                    <div className="dropdown-parent relative h-full mt-[33px] cursor-pointer">
-                        <nav className=" flex justify-center items-center gap-2">
-                            <li className=" font-cormorant text-xl font-semibold list-none">Eyes</li>
-                            <p><ChevronDownIcon /></p>
-                        </nav>
-                        <div className="dropdown-info w-[272px] bg-white absolute top-[45.5px] left-0 shadow-md">
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Eye Serum</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold">Eye Cream</h2>
-                        </div>
-                    </div>
-                    <div className="dropdown-parent relative h-full mt-[33px] cursor-pointer">
-                        <nav className=" flex justify-center items-center gap-2">
-                            <li className=" font-cormorant text-xl font-semibold list-none">Hair</li>
-                            <p><ChevronDownIcon /></p>
-                        </nav>
-                        <div className="dropdown-info w-[272px] bg-white absolute top-[45.5px] left-0 shadow-md">
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Cleanser</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Toner</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Serum</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Moisturizer</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold ">Sunscreen</h2>
-                        </div>
-                    </div>
-                    <div className="dropdown-parent relative h-full mt-[33px] cursor-pointer">
-                        <nav className=" flex justify-center items-center gap-2">
-                            <li className=" font-cormorant text-xl font-semibold list-none">Body care</li>
-                            <p><ChevronDownIcon /></p>
-                        </nav>
-                        <div className="dropdown-info w-[272px] bg-white absolute top-[45.5px] left-0 shadow-md">
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Cleanser</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Toner</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Serum</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold border-b-[1.5px] border-[#543310]">Moisturizer</h2>
-                            <h2 className=" text-[#543310] text-lg font-cormorant py-3 pl-5 hover:text-white hover:bg-[#543310] font-semibold ">Sunscreen</h2>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

@@ -1,7 +1,31 @@
-.dropdown-info {
+/* .dropdown-info {
   display: none;
 }
 
 .dropdown-parent:hover>.dropdown-info {
   display: block;
+} */
+
+
+.dropdown-parent {
+  position: relative;
+}
+
+.dropdown-info {
+  display: none;
+  position: absolute;
+  /* Ensures it appears below the parent */
+  z-index: 10;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-parent:hover .dropdown-info {
+  display: block;
+}
+
+.dropdown-info h2:hover {
+  background-color: #543310;
+  /* Matches the hover color in your design */
+  color: white;
 }

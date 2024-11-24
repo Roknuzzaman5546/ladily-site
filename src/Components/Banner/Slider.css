@@ -20,14 +20,14 @@
 }
 
 .swiper-wrapper {
-    position: unset !important;
+    position: none;
 }
 
 .mySwiper .swiper-wrapper {
-    position: unset !important; /* Or use none/unset */
+    position: none; /* Or use none/unset */
   }
   
   .mySwiper .swiper-slide {
-    position: unset !important;
+    position: none;
   }
   
