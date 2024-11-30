@@ -24,10 +24,10 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className={`md:block hidden relative shadow-md`}>
+            <div className={`md:block hidden relative shadow-2xl`}>
                 {/* Upper menu */}
                 <div className="border-b-[1.5px] border-[#d4d4d4]">
-                    <div className={`flex justify-between items-center xl:h-[63px] lg:h-[62.5px] sm:w-[540px] md:w-[720px] lg:w-[966px] xl:w-[1140px] 2xl:w-[1360px] mx-auto pr-0 md:pr-[6px] lg:pr-[6px] xl:pr-0`}>
+                    <div className={`flex justify-between items-center xl:h-[63px] lg:h-[62.5px] sm:w-[540px] md:w-[720px] lg:w-[966px] xl:w-[1140px] 2xl:w-[1360px] mx-auto pr-0 md:pr-[6px] lg:pr-[0px] lg:pl-[8.5px] xl:pr-0`}>
                         <div className='flex items-center'>
                             <a href="">
                                 <img className=' xl:w-[100px] lg:w-[90px]' src={logo} alt="" />
@@ -82,7 +82,7 @@ const Navbar = () => {
                                 <li className="font-cormorant text-xl font-semibold list-none">{menu}</li>
                                 <ChevronDownIcon />
                             </nav>
-                            <div className="dropdown-info w-[272px] bg-white absolute top-[45px] left-0 shadow-md">
+                            <div className="dropdown-info w-[272px] bg-white absolute top-[46px] left-0 shadow-md">
                                 {["Cleanser", "Toner", "Serum", "Moisturizer", "Sunscreen"].map((item, idx) => (
                                     <h2
                                         key={idx}
