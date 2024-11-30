@@ -34,4 +34,7 @@
 .bgImgSlider{
     background-image: url('https://i.ibb.co.com/fD8gcXg/bg-slider3-1.png');
     background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-position: bottom right;
 }

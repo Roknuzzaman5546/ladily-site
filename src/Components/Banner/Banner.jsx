@@ -42,8 +42,8 @@ const Banner = () => {
           {
             slidesData.map((slide, index) => (
               <SwiperSlide key={index}>
-                <div className="h-[300px] w-full bgImgSlider">
-                  <div className="absolute bottom-0 w-full h-20 bg-black opacity-50">
+                <div className="h-[370px] w-full bgImgSlider">
+                  <div className="absolute bottom-0 w-full h-20 opacity-50">
                     <div className="flex justify-center items-center text-white px-6 py-4">
                       <h2 className="text-lg">{slide.title}</h2>
                       <p className="text-sm">{slide.subtitle}</p>
